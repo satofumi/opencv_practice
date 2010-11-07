@@ -1,0 +1,26 @@
+/*!
+  \page install_linux Linux
+
+  O'Rilly の本を参考にする、という前提でしたが、ダウンロードした OpenCV-2.1.0 ではインストール方法が CMake を用いた方法に変わっていました。
+
+  ですので <a href="http://opencv.jp/">OpenCV.jp</a> のサイトを参考にしてインストールを行いました。
+
+  - OpenCV.jp の Linux 用インストールページ
+    - http://opencv.jp/opencv2-x-tips/install-linuxubuntu
+
+  - OpenCV.jp の説明より抜粋 (パッチをあてるためのコマンドは不要でした。)
+\verbatim
+% tar jxvf OpenCV-2.1.0.tar.bz2
+% cd OpenCV-2.1.0
+
+% mkdir release
+% cd release
+% cmake -D BUILD_EXAMPLES=ON -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D BUILD_PYTHON_SUPPORT=ON -D WITH_1394=OFF -D ENABLE_OPENMP=ON ../
+% make
+% sudo make install \endverbatim
+
+  make には、それなりに時間がかかります。\n
+  PC の性能にもよると思いますが、私の PC では十数分かかりました。
+
+  ともあれ、上記手順までで、インストールは完了です。
+*/
