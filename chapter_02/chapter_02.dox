@@ -1,0 +1,47 @@
+/*!
+  \page chapter_02_page ２章
+
+  この章の内容。
+
+  - \ref chapter_02_show_image
+  - \ref chapter_02_show_movie
+
+
+  \section chapter_02_show_image 画像をスクリーンに表示する
+
+  まず、取得済みの画像を OpenCV ライブラリで表示するサンプルが紹介されていました。\n
+  そのサンプル、およびコンパイルするための Makefile はこんな感じです。
+
+  <b>example_2-1.cpp</b>
+  \include chapter_02/example_2-1.cpp
+
+  <b>Makefile</b>
+  \include chapter_02/Makefile
+
+  これらのファイルがある状態で make コマンドを入力するとコンパイルされます。
+
+  \verbatim
+% make
+g++ -g -O0 -Wall -Werror -I/usr/local/include/opencv    example_2-1.cpp  -lhighgui -o example_2-1 \endverbatim
+
+  プログラムを実行するときには、引数で表示したい画像ファイルへのパスを指定します。\n
+  今回は、木刀に Wii リモコンを取り付けた画像をサンプルとして用いました。
+
+  <b>実行コマンド例</b>
+  \verbatim
+./example_2-1 wii_blade.jpg \endverbatim
+
+  <b>実行結果の例</b>
+  \image html show_wii_blade.png 表示されたウィンドウ
+
+  まぁ、最初のサンプルということもあり簡単ですね。
+
+
+  \section chapter_02_show_movie 動画をスクリーンに表示する (!!! 記述中)
+
+  !!! 再生
+
+  !!! スライダーを追加
+
+  !!!
+*/
