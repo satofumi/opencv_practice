@@ -32,16 +32,30 @@ g++ -g -O0 -Wall -Werror -I/usr/local/include/opencv    example_2-1.cpp  -lhighg
 ./example_2-1 wii_blade.jpg \endverbatim
 
   <b>実行結果の例</b>
-  \image html show_wii_blade.png 表示されたウィンドウ
+  \image html show_wii_blade.png 表示されたウィンドウと画像
 
   まぁ、最初のサンプルということもあり簡単ですね。
 
 
-  \section chapter_02_show_movie 動画をスクリーンに表示する (!!! 記述中)
+  \section chapter_02_show_movie 動画をスクリーンに表示する
 
-  !!! 再生
+  次は、動画を表示するサンプルの掲載です。
 
-  !!! スライダーを追加
+
+  \subsection chapter_02_show_movie_1st 動画ファイルを再生するサンプル
+
+  引数に動画ファイルを指定すると、再生を行うサンプルです。\n
+  実行方法やコンパイル方法は、画像を表示するサンプルの example_2-1 と同じなので、プログラムのみ掲載します。
+
+  \include chapter_02/example_2-2.cpp
+
+  詳しいことは確認しないとわかりませんが frame に動画から画像を抜き出し、それを表示させているようです。動画ファイルを指定して実行すると、動画が再生されました。
+
+  \image html g_lang_snapshot.png "再生画面のスナップショット。動画は http://www.limo.fumi2kick.com/forum/lm_forum02.html よりダウンロード"
+
+  \subsection chapter_02_show_movie_2nd スライドバーを付加
+
+  !!! スライドバーを追加
 
   !!!
 */
