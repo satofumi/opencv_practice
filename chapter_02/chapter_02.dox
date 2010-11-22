@@ -4,8 +4,10 @@
   この章の内容。
 
   - \ref chapter_02_show_image
-  - \ref chapter_02_show_movie
-  - \ref chapter_02_show_movie_2nd
+    - \ref chapter_02_show_image
+    - \ref chapter_02_show_movie
+    - \ref chapter_02_show_movie_2nd
+  \ref chapter_02_filter
 
 
   \section chapter_02_show_image 画像をスクリーンに表示する
@@ -52,7 +54,7 @@ g++ -g -O0 -Wall -Werror -I/usr/local/include/opencv    example_2-1.cpp  -lhighg
 
   詳しいことは確認しないとわかりませんが frame に動画から画像を抜き出し、それを表示させているようです。動画ファイルを指定して実行すると、動画が再生されました。
 
-  \image html g_lang_snapshot.png "再生画面のスナップショット。動画は http://www.limo.fumi2kick.com/forum/lm_forum02.html よりダウンロード"
+  \image html g_lang_snapshot.png "再生画面のスナップショット。動画は http://www.limo.fumi2kick.com/forum/lm_forum02.html よりダウンロード。"
 
 
   \subsection chapter_02_show_movie_2nd スライドバーを付加
@@ -62,13 +64,26 @@ g++ -g -O0 -Wall -Werror -I/usr/local/include/opencv    example_2-1.cpp  -lhighg
 
   \include chapter_02/example_2-3.cpp
 
-  再生に合わせてスライダーが移動するようにしましたが、スライダーをマウスで動かすと、なんだかカクカクします。再生できるフレームが決まっているせいかなー、と思いつつ、よくわからないまま保留にしておきます。\n
+  再生に合わせてスライダーが移動するようにしましたが、スライダーをマウスで動かすと、なんだかカクカクします。詳しいことはわかりませんが、よくわからないまま保留にしておきます。\n
   いずれ、わかる日がくるでしょう。
+
+  \image html g_lang_snapshot_2nd.png "再生画面 (スライダー付き)のスナップショット。動画は http://www.limo.fumi2kick.com/forum/lm_forum02.html よりダウンロード"
 
 
   \section chapter_02_filter 画像の変換処理
 
-  次は、画像の変換処理を行います。
+  次は、画像の変換処理です。
+
+
+  \subsection chapter_02_filter_smooth 画像の平滑化
+
+  cvSmooth() を適用して画像を平滑化し、元画像と合わせて表示するサンプルです。
+
+  \include chapter_02/example_2-4.cpp
+
+  \image html gaussian_converted_image.png "左が元画像, 右が変換後の画像"
+
+  簡単に変換処理ができるあたり、OpenCV はよくできてると思う。
 
   !!!
 */

@@ -1,5 +1,5 @@
 /*!
-  \example example_2-2.cpp ビデオファイルの再生サンプル
+  \example example_2-3.cpp ビデオファイルの再生サンプル (スライダー付き)
 
   \author Satofumi KAMIMURA
 
