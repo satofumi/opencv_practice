@@ -5,6 +5,7 @@
 
   - \ref chapter_02_show_image
   - \ref chapter_02_show_movie
+  - \ref chapter_02_show_movie_2nd
 
 
   \section chapter_02_show_image 画像をスクリーンに表示する
@@ -53,9 +54,21 @@ g++ -g -O0 -Wall -Werror -I/usr/local/include/opencv    example_2-1.cpp  -lhighg
 
   \image html g_lang_snapshot.png "再生画面のスナップショット。動画は http://www.limo.fumi2kick.com/forum/lm_forum02.html よりダウンロード"
 
+
   \subsection chapter_02_show_movie_2nd スライドバーを付加
 
-  !!! スライドバーを追加
+  スライドバーを追加します。\n
+  ソースコードの説明については、本で説明してあった通りの内容です。
+
+  \include chapter_02/example_2-3.cpp
+
+  再生に合わせてスライダーが移動するようにしましたが、スライダーをマウスで動かすと、なんだかカクカクします。再生できるフレームが決まっているせいかなー、と思いつつ、よくわからないまま保留にしておきます。\n
+  いずれ、わかる日がくるでしょう。
+
+
+  \section chapter_02_filter 画像の変換処理
+
+  次は、画像の変換処理を行います。
 
   !!!
 */
