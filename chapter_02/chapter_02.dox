@@ -7,10 +7,13 @@
     - \ref chapter_02_show_image
     - \ref chapter_02_show_movie
     - \ref chapter_02_show_movie_2nd
-  \ref chapter_02_filter
+  - \ref chapter_02_filter
     - \ref chapter_02_filter_smooth
     - \ref chapter_02_filter_size
     - \ref chapter_02_filter_canny
+  - \ref chapter_02_camera
+    - \ref chapter_02_camera_capture
+    - \ref chapter_02_camera_convert
 
 
   \section chapter_02_show_image 画像をスクリーンに表示する
@@ -104,12 +107,44 @@ g++ -g -O0 -Wall -Werror -I/usr/local/include/opencv    example_2-1.cpp  -lhighg
 
   \subsection chapter_02_filter_canny Canny エッジ検出
 
-  Canny エッジ検出のサンプル、らしいです。\n
-  Canny エッジが何なのかは、実行するまで不明でした。
+  Canny エッジ検出のサンプル、らしいです。Canny エッジが何なのかは知らなかったので検索してみました。\n
+  http://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%83%E3%82%B8%E6%A4%9C%E5%87%BA
 
   \include chapter_02/example_2-6.cpp
 
-  !!! 実行結果
+  しかし gimp で変換して作成したグレイスケール画像を使ったところ nChannel が 3 らしく、変換結果を見ることができなかった。
 
-  !!!
+  しばらく悩んでいたが OpenCV.jp の Canny のサンプルを見ると cvLoadImage() でグレイスケール扱いで画像を読み込む方法があったので、それを使うことにした。
+
+  \image html canny_converted_image.png "元画像に直接 Canny フィルタを適用したもの(左), ガウシアンフィルタ後に Canny フィルタを適用したもの(右)"
+
+  画像処理って面白い、と思った。
+
+  それから、example_2-7, example_2-8 はメモリ管理まわりの理解するだけの話題だったので、プログラムは省略します。
+
+
+  \section chapter_02_camera カメラ
+
+  \subsection chapter_02_camera_capture カメラからの動画を保存
+
+  掲載されていたサンプルプログラムでは、カメラの場合の CvCapture 構造体の扱い方がファイルからのものと違いがないことを示していました。
+
+  が、予定を変更してカメラから動画を保存するサンプルを紹介します。
+
+  \include chapter_02/example_2-9.cpp
+
+  USB カメラを PC に接続してプログラムを実行すると、動作を確認できます。\n
+  ファイルが生成されていたら、プログラムは正常に動作しています。
+
+  あと、私の Linux 環境だと root にならないとプログラムは動作しませんでした。
+
+
+  \subsection chapter_02_camera_convert カメラからの画像の保存
+
+  本には「読めばわかるよね」的な説明がありました。まぁ、わかったことにします。\n
+  あと、プログラムを実行すると変換後のファイルができるものの、再生はできませんでした。よくわかりません。
+
+  \include chapter_02/example_2-10.cpp
+
+  具体的に何の変換をしているかは 6章ででてくるようなので、そのときに勉強します。
 */

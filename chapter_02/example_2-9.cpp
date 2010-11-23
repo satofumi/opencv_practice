@@ -1,5 +1,5 @@
 /*!
-  \example example_2-2.cpp ビデオファイルの再生サンプル
+  \example example_2-9.cpp ビデオからの画像取り込み
 
   \author Satofumi KAMIMURA
 
@@ -7,6 +7,7 @@
 */
 
 #include "highgui.h"
+#include "cv.h"
 #include <iostream>
 
 using namespace std;
@@ -14,16 +15,15 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    if (argc <= 1) {
-        cout << "usage: " << argv[0] << " <movie file>" << endl;
+    CvCapture* capture = cvCreateCameraCapture(0);
+    if (!capture) {
+        cout << "camera device is not found." << endl;
+        cout << "try by root user." << endl;
         return 1;
     }
 
-    const char* movie_file = argv[1];
-    const char* window_title = "Example 2";
-
+    const char* window_title = "Example 9";
     cvNamedWindow(window_title, CV_WINDOW_AUTOSIZE);
-    CvCapture* capture = cvCreateFileCapture(movie_file);
     while (true) {
         IplImage* frame = cvQueryFrame(capture);
         if (!frame) {
