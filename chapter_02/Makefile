@@ -14,6 +14,7 @@ TARGET = \
 	example_2-3 \
 	example_2-4 \
 	example_2-5 \
+	example_2-6 \
 
 all : $(TARGET)
 

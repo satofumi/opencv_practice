@@ -8,6 +8,9 @@
     - \ref chapter_02_show_movie
     - \ref chapter_02_show_movie_2nd
   \ref chapter_02_filter
+    - \ref chapter_02_filter_smooth
+    - \ref chapter_02_filter_size
+    - \ref chapter_02_filter_canny
 
 
   \section chapter_02_show_image 画像をスクリーンに表示する
@@ -84,6 +87,29 @@ g++ -g -O0 -Wall -Werror -I/usr/local/include/opencv    example_2-1.cpp  -lhighg
   \image html gaussian_converted_image.png "左が元画像, 右が変換後の画像 (GAUSSIAN フィルタ)"
 
   簡単に変換処理ができるあたり、OpenCV はよくできてると思う。
+
+
+  \subsection chapter_02_filter_size 画像の縮小
+
+  画像サイズを半分にするサンプル。\n
+  必要最小限の説明しかないあたり、このあたりからオライリーらしくなってきます。\n
+  初心者にはちょっとつらいです。
+
+  \include chapter_02/example_2-5.cpp
+
+  あと、本に掲載されていたサンプルで filter を引数にして渡している理由が不明です。なので、削りました。
+
+  \image html pyr_converted_image.png "縮小された画像"
+
+
+  \subsection chapter_02_filter_canny Canny エッジ検出
+
+  Canny エッジ検出のサンプル、らしいです。\n
+  Canny エッジが何なのかは、実行するまで不明でした。
+
+  \include chapter_02/example_2-6.cpp
+
+  !!! 実行結果
 
   !!!
 */
