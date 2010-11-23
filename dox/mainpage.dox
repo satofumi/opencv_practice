@@ -7,6 +7,9 @@
   ページ中の説明やソースコードは自由にご利用下さい。\n
   ソースコードのライセンスは OpenCV と同じ BSD ライセンスとします。
 
+  また、全てのソースコードは、以下の github プロジェクトで管理されています。\n
+  http://github.com/satofumi/opencv_practice
+
   - \subpage chapter_01_page
     - \subpage chapter_01_install
       - \subpage chapter_01_install_windows
@@ -15,9 +18,13 @@
   - \subpage chapter_02_page
     - \ref chapter_02_show_image
     - \ref chapter_02_show_movie
+    - \ref chapter_02_filter
     - !!!
 
   - !!!
+
+  - \subpage chapter_13_page
+    - !!!
 
   - Python から OpenCV を使う
      - !!!

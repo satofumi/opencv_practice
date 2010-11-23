@@ -1,5 +1,5 @@
 /*!
-  \page chapter_01_page １章
+  \page chapter_01_page １章, 概要
 
   １章では OpenCV の紹介とインストールについて説明してあります。\n
   以降では、OpenCV の紹介はすっとばして実際にインストールした手順のみを紹介します。

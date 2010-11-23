@@ -1,5 +1,5 @@
 /*!
-  \page chapter_02_page ２章
+  \page chapter_02_page ２章, OpenCV 入門
 
   この章の内容。
 
@@ -81,7 +81,7 @@ g++ -g -O0 -Wall -Werror -I/usr/local/include/opencv    example_2-1.cpp  -lhighg
 
   \include chapter_02/example_2-4.cpp
 
-  \image html gaussian_converted_image.png "左が元画像, 右が変換後の画像"
+  \image html gaussian_converted_image.png "左が元画像, 右が変換後の画像 (GAUSSIAN フィルタ)"
 
   簡単に変換処理ができるあたり、OpenCV はよくできてると思う。
 

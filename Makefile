@@ -5,14 +5,16 @@ HTML_DIR = generated_html
 
 all : html
 	cd chapter_02/ && $(MAKE)
+	cd chapter_13/ && $(MAKE)
 
 clean :
 	$(RM) -rf $(HTML_DIR)
 	cd chapter_02/ && $(MAKE) clean
+	cd chapter_13/ && $(MAKE) clean
 
 html : $(HTML_DIR)/index.html
 
 .PHONY : all clean html
 ######################################################################
-$(HTML_DIR)/index.html : Makefile Doxyfile $(wildcard dox/* chapter_01/* chapter_02/*)
+$(HTML_DIR)/index.html : Makefile Doxyfile $(wildcard dox/* chapter_01/* chapter_02/* chapter_13/*)
 	doxygen
