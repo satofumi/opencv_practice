@@ -1,5 +1,9 @@
 /*!
   \example example_2-1.cpp 画像ファイルをスクリーンに表示するサンプル
+
+  \author Satofumi KAMIMURA
+
+  $Id$
 */
 
 #include "highgui.h"
