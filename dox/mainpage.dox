@@ -22,7 +22,11 @@
     - \ref chapter_02_camera
 
   - \subpage chapter_03_page
+    - \ref chapter_03_matric
+    - \ref chapter_03_iplimage
     - !!!
+
+  !!!
 
   - \subpage chapter_13_page
     - !!!

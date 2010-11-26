@@ -1,4 +1,4 @@
-# chapter_02
+# chapter_03
 
 PREFIX = /usr/local
 
@@ -9,14 +9,7 @@ LDLIBS = -lhighgui
 
 
 TARGET = \
-	example_2-1 \
-	example_2-2 \
-	example_2-3 \
-	example_2-4 \
-	example_2-5 \
-	example_2-6 \
-	example_2-9 \
-	example_2-10 \
+	example_3-11
 
 all : $(TARGET)
 

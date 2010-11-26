@@ -1,0 +1,33 @@
+/*!
+  \page chapter_03_page 3章
+
+  OpenCV で使えるデータ構造についての説明です。C 用のデータ構造について説明されています。
+
+  - \ref chapter_03_matric
+  - \ref chapter_03_iplimage
+    - \ref chapter_03_iplimage_hsv
+
+
+  \section chapter_03_matric 行列のデータ構造
+
+  行列のデータ構造の初期化方法からアクセス方法まで、いろいろ説明してあります。\n
+  読めばわかる内容ですので、プログラムは省略します。
+
+
+  \section chapter_03_iplimage 画像のデータ構造
+
+  IplImage について説明してあります。
+
+  \subsection chapter_03_iplimage_hsv HSV 画像の S と V の要素を最大化させるサンプル
+
+  画像にアクセスするサンプルがあったので、そのプログラムを掲載します。プログラムの処理内容は、HSV 画像の S と V の要素だけ値を最大化させているそうです。
+
+  \include chapter_03/example_3-11.c
+
+  \image html chapter_03/hsv_converted_image.jpg "HSV 画像の S と V の要素を飽和させた結果の画像"
+
+  結果、画像が黄色っぽくなりました。\n
+  HSV 画像について調べたところ、
+
+  !!!
+*/
