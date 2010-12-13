@@ -24,6 +24,8 @@
   - \subpage chapter_03_page
     - \ref chapter_03_matric
     - \ref chapter_03_iplimage
+    - \ref chapter_03_roi
+    - \ref chapter_03_width
     - !!!
 
   !!!
