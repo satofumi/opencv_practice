@@ -22,12 +22,32 @@
 
   画像にアクセスするサンプルがあったので、そのプログラムを掲載します。プログラムの処理内容は、HSV 画像の S と V の要素だけ値を最大化させているそうです。
 
-  \include chapter_03/example_3-11.c
+  \include chapter_03/example_3-11.cpp
 
-  \image html chapter_03/hsv_converted_image.jpg "HSV 画像の S と V の要素を飽和させた結果の画像"
+  \image html chapter_03/wii_blade_hsv.jpg "HSV 画像の S と V の要素を飽和させた結果の画像"
 
   結果、画像が黄色っぽくなりました。\n
-  HSV 画像について調べたところ、
+  HSV 画像について調べたところ、色の表現方法の１つらしく、HSV とは Hue、Saturation、Value の略語らしい。
+
+  - HSV 色空間 (Wikipedia より)
+    - http://ja.wikipedia.org/wiki/HSV%E8%89%B2%E7%A9%BA%E9%96%93
+
+  でも、H と S を最大にしたら、なんで黄色くなるかは不明。\n
+  色相の最大は、黄色なのかな。
+
+
+  \subsection chapter_03_roi 部分領域の変更
+
+  !!! 概説
+
+  ROI って何？ と思ったら !!! のことらしい。\n
+  ここで指定した領域のみ、フィルタなどの操作が有効になるようだ。
+
+  \include chapter_03/example_3-12.cpp
+
+  !!! 実行結果
+
+  !!! 考察
 
   !!!
 */

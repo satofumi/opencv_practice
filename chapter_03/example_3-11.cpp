@@ -1,5 +1,5 @@
 /*!
-  \example example_3-11.c HSV 画像の S と V の要素を最大化させるサンプル
+  \example example_3-11.cpp HSV 画像の S と V の要素を最大化させるサンプル
 
   \author Satofumi KAMIMURA
 

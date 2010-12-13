@@ -9,7 +9,8 @@ LDLIBS = -lhighgui
 
 
 TARGET = \
-	example_3-11
+	example_3-11 \
+	example_3-12 \
 
 all : $(TARGET)
 
