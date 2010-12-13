@@ -36,18 +36,24 @@
   色相の最大は、黄色なのかな。
 
 
-  \subsection chapter_03_roi 部分領域の変更
+  \subsection chapter_03_roi 部分領域の変更 (ROI)
 
-  !!! 概説
+  ROI って何？ と思ったら ROI（Region Of Interest） のことらしい。\n
+  http://opencv.jp/sample/initialization.html
 
-  ROI って何？ と思ったら !!! のことらしい。\n
-  ここで指定した領域のみ、フィルタなどの操作が有効になるようだ。
+  ROI を使うと、指定した領域のみフィルタなどの操作が有効になるようだ。
+
+  あと 書籍に掲載されている example 3-12 には間違いがあった、正誤表は、ここ。 \n
+  http://www.oreilly.co.jp/books/9784873114132/
 
   \include chapter_03/example_3-12.cpp
 
-  !!! 実行結果
+  \image html wii_blade_roi.jpg "\"example_3-12 wii_blade.jpg 20 30 150 300 100\"' で実行したときの結果"
 
-  !!! 考察
+  便利そう。
+
+
+  \subsection chapter_03_width 部分領域の変更 (widthStep)
 
   !!!
 */
