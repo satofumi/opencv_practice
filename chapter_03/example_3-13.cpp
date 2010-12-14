@@ -1,5 +1,5 @@
 /*!
-  \example example_3-12.cpp ROI を使って部分領域を変更するサンプル
+  \example example_3-12.cpp widthStep を使って部分領域を変更するサンプル
 
   \author Satofumi KAMIMURA
 
@@ -42,13 +42,28 @@ int main(int argc, char *argv[])
     int y = atoi(argv[3]);
     int width = atoi(argv[4]);
     int height = atoi(argv[5]);
+    CvRect interest_rect;
+    interest_rect.x = x;
+    interest_rect.y = y;
+    interest_rect.width = width;
+    interest_rect.height = height;
+
     int add = atoi(argv[6]);
 
-    cvSetImageROI(image, cvRect(x, y, width, height));
-    cvAddS(image, cvScalar(add), image);
-    cvResetImageROI(image);
+    IplImage* sub_image =
+        cvCreateImageHeader(cvSize(interest_rect.width,
+                                   interest_rect.height),
+                            image->depth, image->nChannels);
+    sub_image->origin = image->origin;
+    sub_image->widthStep = image->widthStep;
+    sub_image->imageData = image->imageData +
+        (interest_rect.x * image->widthStep) +
+        (interest_rect.y * image->nChannels);
 
-    const char* window_title = "Example 12";
+    cvAddS(sub_image, cvScalar(add), sub_image);
+    cvReleaseImageHeader(&sub_image);
+
+    const char* window_title = "Example 13";
     cvNamedWindow(window_title, CV_WINDOW_AUTOSIZE);
     cvShowImage(window_title, image);
     cvWaitKey(0);

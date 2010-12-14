@@ -53,7 +53,18 @@
   便利そう。
 
 
-  \subsection chapter_03_width 部分領域の変更 (widthStep) (!!! 記述中)
+  \subsection chapter_03_width 部分領域の変更 (widthStep)
 
-  !!!
+  widthStep を使って ROI と同様のことを行うサンプルです。
+
+  \include chapter_03/example_3-13.cpp
+
+  \image html wii_blade_widthStep.jpg "\"example_3-13 wii_blade.jpg 20 30 150 300 50\"' で実行したときの結果"
+
+  ROI でなくて、わざわざ widthStep を使う理由は "ROI は１つの画像に１つしか設定できないから" だそうです。
+
+  なるほど。
+
+
+  // !!!
 */
