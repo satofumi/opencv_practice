@@ -16,5 +16,5 @@ html : $(HTML_DIR)/index.html
 
 .PHONY : all clean html
 ######################################################################
-$(HTML_DIR)/index.html : Makefile Doxyfile $(wildcard dox/* chapter_01/* chapter_02/* chapter_03/* chapter_13/*)
+$(HTML_DIR)/index.html : Makefile Doxyfile $(wildcard dox/* chapter_01/* chapter_02/* chapter_03/* chapter_04/* chapter_13/*)
 	doxygen

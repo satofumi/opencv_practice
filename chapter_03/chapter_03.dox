@@ -1,5 +1,5 @@
 /*!
-  \page chapter_03_page 3章
+  \page chapter_03_page 3章, OpenCV について知る
 
   OpenCV で使えるデータ構造についての説明です。C 用のデータ構造について説明されています。
 
@@ -63,8 +63,34 @@
 
   ROI でなくて、わざわざ widthStep を使う理由は "ROI は１つの画像に１つしか設定できないから" だそうです。
 
-  なるほど。
+
+  \section chapter_03_vector 行列と画像
+
+  \subsection chapter_03_addweighted cvAddWeighted() を用いたアルファブレンド処理
+
+  行列操作を画像に適用する例として、画像に対するアルファブレンド処理を行っています。
+
+  \include chapter_03/example_3-14.cpp
+
+  \image html wii_blade_addweighted.jpg "\"example_3-14 wii_blade.jpg cat.jpg 20 30 150 150 40 60\"' で実行したときの結果"
+
+  猫の画像は http://labaq.com/archives/51089156.html より取得。\n
+  ここではアルファブレンドのサンプルのみの紹介だが、他の行列操作についても同様に画像への適用が可能なのだと思う。
 
 
-  // !!!
+  \section chapter_03_data データ保管
+
+  \subsection chapter_03_storage  構造体の設定を読み書きする例
+
+  - !!! example_3-15, p86
+  - !!! example_3-17, 3-18, 3-19, p86
+
+
+  \section chapter_03_ipp IPP
+
+  \subsection chapter_03_ipp_check IPP のインストール確認
+
+  - 3-20, p89
+
+  !!!
 */

@@ -26,7 +26,11 @@
     - \ref chapter_03_iplimage
     - \ref chapter_03_roi
     - \ref chapter_03_width
-    - !!!
+    - \ref chapter_03_addweighted
+    - \ref chapter_03_storage
+    - \ref chapter_03_ipp_check
+
+  - \subpage chapter_04_page
 
   !!!
 
