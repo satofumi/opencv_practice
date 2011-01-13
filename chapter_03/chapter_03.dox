@@ -82,7 +82,19 @@
 
   \subsection chapter_03_storage  構造体の設定を読み書きする例
 
-  - !!! example_3-15, p86
+  CSCORE という仕組みには、設定をファイルに出力したり、その出力ファイルを読み込む仕組みが用意されているらしいです。以下は、そのサンプルです。
+
+  最初のプログラムで設定をファイルに出力し、次のサンプルで設定をファイルから読み込んでいます。
+
+  設定をファイルに出力するプログラム
+  \include chapter_03/example_3-16.cpp
+
+  出力されたファイル
+  \include chapter_03/cfg.xml
+
+  設定をファイルから読み込むプログラム
+  \include chapter_03/example_3-19.cpp
+
   - !!! example_3-17, 3-18, 3-19, p86
 
 
@@ -90,7 +102,21 @@
 
   \subsection chapter_03_ipp_check IPP のインストール確認
 
-  - 3-20, p89
+  IPP(Integrated Performance Primitives) とは Intel 製の高性能なツールボックスらしいです。\n
+  ここでは IPP がインストールされているかを検証するプログラムと、その実行結果を紹介します。
+
+  \include include/example_3-20.cpp
+
+  実行結果
+  \verbatim
+% ./example_3-20
+% !!!
+  \endverbatim
+
+  私の Linux 環境だと IPP は使われていないようです...。\n
+  もしかすると Ubuntu とかメジャーなディストリビューションを使っていると IPP が有効になるのかもしれません。
+
+  - !!! 3-20, p89
 
   !!!
 */
