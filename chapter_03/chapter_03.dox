@@ -80,14 +80,14 @@
 
   \section chapter_03_data データ保管
 
-  \subsection chapter_03_storage  構造体の設定を読み書きする例
+  \subsection chapter_03_storage 構造体の設定を読み書きする例
 
   CSCORE という仕組みには、設定をファイルに出力したり、その出力ファイルを読み込む仕組みが用意されているらしいです。以下は、そのサンプルです。
 
   最初のプログラムで設定をファイルに出力し、次のサンプルで設定をファイルから読み込んでいます。
 
   設定をファイルに出力するプログラム
-  \include chapter_03/example_3-16.cpp
+  \include chapter_03/example_3-17.cpp
 
   出力されたファイル
   \include chapter_03/cfg.xml
@@ -110,13 +110,10 @@
   実行結果
   \verbatim
 % ./example_3-20
-% !!!
-  \endverbatim
+Libraries: cxcore: 2.1.0
+Modules:
+% \endverbatim
 
   私の Linux 環境だと IPP は使われていないようです...。\n
   もしかすると Ubuntu とかメジャーなディストリビューションを使っていると IPP が有効になるのかもしれません。
-
-  - !!! 3-20, p89
-
-  !!!
 */
