@@ -72,7 +72,7 @@
 
   \include chapter_03/example_3-14.cpp
 
-  \image html wii_blade_addweighted.jpg "\"example_3-14 wii_blade.jpg cat.jpg 20 30 150 150 40 60\"' で実行したときの結果"
+  \image html wii_blade_addweighted.jpg "\"example_3-14 wii_blade.jpg cat.jpg 20 30 200 150 0.4 0.6\"' で実行したときの結果"
 
   猫の画像は http://labaq.com/archives/51089156.html より取得。\n
   ここではアルファブレンドのサンプルのみの紹介だが、他の行列操作についても同様に画像への適用が可能なのだと思う。
@@ -95,8 +95,6 @@
   設定をファイルから読み込むプログラム
   \include chapter_03/example_3-19.cpp
 
-  - !!! example_3-17, 3-18, 3-19, p86
-
 
   \section chapter_03_ipp IPP
 
@@ -105,7 +103,7 @@
   IPP(Integrated Performance Primitives) とは Intel 製の高性能なツールボックスらしいです。\n
   ここでは IPP がインストールされているかを検証するプログラムと、その実行結果を紹介します。
 
-  \include include/example_3-20.cpp
+  \include chapter_03/example_3-20.cpp
 
   実行結果
   \verbatim

@@ -1,5 +1,5 @@
 /*!
-  \example example_3-19.cpp 構造体の設定を読み書きする例
+  \example example_3-19.cpp 構造体の設定を読み込む例
 
   \author Satofumi KAMIMURA
 
@@ -22,16 +22,27 @@ namespace
 
         cout << "frame_count: " << frame_count << endl;
 
-        // !!!
-#if 0
-        cvWriteInt(fs, "frame_count", 10);
-        cvStartWriteStruct(fs, "frame_size", CV_NODE_SEQ);
-        cvWriteInt(fs, 0, 320);
-        cvWriteInt(fs, 0, 200);
-        cvEndWriteStruct(fs);
-        cvWrite(fs, "color_cvt_matrix", cmatrix);
+        CvSeq* s = cvGetFileNodeByName(fs, 0, "frame_size")->data.seq;
+        int frame_width = cvReadInt((CvFileNode*)cvGetSeqElem(s, 0));
+        int frame_height = cvReadInt((CvFileNode*)cvGetSeqElem(s, 1));
+        cout << "frame_width: " << frame_width << endl
+             << "frame_height: " << frame_height << endl;
+
+        CvMat* color_cvt_matrix =
+            (CvMat*)cvReadByName(fs, 0, "color_cvt_matrix");
+
+        int rows = color_cvt_matrix->rows;
+        int cols = color_cvt_matrix->cols;
+        cout << "matrix_rows: " << rows << endl
+             << "matrix_cols: " << cols << endl;
+
+        for (int y = 0; y < rows; ++y) {
+            for (int x = 0; x < cols; ++x) {
+                cout << cvmGet(color_cvt_matrix, x, y) << endl;
+            }
+        }
+
         cvReleaseFileStorage(&fs);
-#endif
     }
 }
 
