@@ -29,8 +29,9 @@ int main(int argc, char *argv[])
         cvAddWeighted(src1, alpha, src2, beta, 0.0, src1);
         cvResetImageROI(src1);
 
-        cvNamedWindow("Alpha_blend", 1);
-        cvShowImage("Alpha_blend", src1);
+        const char* window_name = "Alpha_blend";
+        cvNamedWindow(window_name, 1);
+        cvShowImage(window_name, src1);
         cvWaitKey();
     }
 

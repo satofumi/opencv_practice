@@ -1,5 +1,5 @@
 /*!
-  \example example_3-16.cpp 構造体の設定を書き込む例
+  \example example_3-17.cpp 構造体の設定を書き込む例
 
   \author Satofumi KAMIMURA
 

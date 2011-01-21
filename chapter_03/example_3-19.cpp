@@ -19,7 +19,6 @@ namespace
     {
         CvFileStorage* fs = cvOpenFileStorage("cfg.xml", 0, CV_STORAGE_READ);
         int frame_count = cvReadIntByName(fs, 0, "frame_count", 5);
-
         cout << "frame_count: " << frame_count << endl;
 
         CvSeq* s = cvGetFileNodeByName(fs, 0, "frame_size")->data.seq;
