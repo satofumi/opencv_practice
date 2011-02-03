@@ -42,10 +42,6 @@
   - Python から OpenCV を使う
      - !!!
 
-  - サンプル・アプリケーションの作成
-    - 顔の認識
-      - 顔のある位置の取得
-      - 顔認識
-    \n \n
-    - !!!
+  - \subpage sample_applications_page
+    - \ref face_detect_page
 */
