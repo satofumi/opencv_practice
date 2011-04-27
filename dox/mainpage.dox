@@ -1,11 +1,11 @@
 /*!
   \mainpage OpenCV practice
 
-  O'Rilly の OpenCV 本を参考にしつつ、OpenCV を勉強する過程を紹介しています。\n
+  O'Rilly の OpenCV 本のプログラムを入力して実行しながら OpenCV を勉強する過程を紹介しています。なので、もっと詳しく知りたい方は本を購入して下さい。\n
   ちなみに、私は OpenCV については初心者です。\n
 
   ソースコードのライセンスは OpenCV と同じ BSD ライセンスとします。\n
-  ページ中の説明やソースコードは自由にご利用下さい。
+  このページ中の説明やソースコードは自由にご利用下さい。
 
   また、全てのソースコードは、以下の github プロジェクトで管理されています。\n
   http://github.com/satofumi/opencv_practice
@@ -31,6 +31,10 @@
     - \ref chapter_03_ipp_check
 
   - \subpage chapter_04_page
+    - \ref chapter_04_image
+    - \ref chapter_04_movie
+
+  - \subpage chapter_05_page
 
   !!!
 

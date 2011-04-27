@@ -6,7 +6,7 @@
   $Id$
 */
 
-#include "opencv/cv.h"
+#include <cv.h>
 #include <iostream>
 
 using namespace std;

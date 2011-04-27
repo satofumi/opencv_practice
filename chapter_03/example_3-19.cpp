@@ -6,8 +6,8 @@
   $Id$
 */
 
-#include <opencv/cxcore.h>
-#include <opencv/cv.h>
+#include <cv.h>
+#include <cxcore.h>
 #include <iostream>
 
 using namespace std;

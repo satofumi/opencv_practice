@@ -1,5 +1,57 @@
 /*!
   \page chapter_04_page ４章, HighGUI
 
-  !!!
+  OpenCV が提供している GUI と画像の表示、動画の表示について説明されています。
+
+
+  \section chapter_04_image 画像を表示する
+
+  \subsection chapter_04_image_window 画像をウィンドウに表示させるサンプル
+
+  ここでは、画像をウィンドウに表示し、 ESC キーが押されたらウィンドウを閉じてプログラムを終了する処理を行うソースコードが紹介されていました。
+
+  \include example_4-0.cpp
+
+  実行結果
+  \image html image_window.jpg example_4-0 の実行結果の例
+
+  まぁ、今までにも使ってきたので問題ないですね。
+
+
+  \subsection chapter_04_image_mouse マウスで描画を行うサンプル
+
+  マウスのコールバックを処理して、ウィンドウ上にマウスの左ボタンでドラッグした範囲に矩形を描画するサンプルです。
+
+  \include example_4-1.cpp
+
+  実行結果
+  \image html box_example_image.png example_4-1 を実行して矩形を書いた図
+
+  このプログラムは cvNamedWndow() を入力し忘れた状態でマウスのコールバック関数を呼んだところ、エラーにならないし、コールバックは呼ばれないし、で少し悩みました。 \n
+  まぁ、私の入力忘れだったんですけど。
+
+
+  \subsection chapter_04_image_button トラックバーを用いたスイッチの実現
+
+  \include example_4-2.cpp
+
+  実行結果
+  \image html trackbar_switch_image.jpg スイッチとして動作しているの図
+
+  確かにボタンとして使えなくはないが、できれば Qt の設定をした上で OpenCV を使うようにしたい。
+
+
+  \section chapter_04_movie ビデオを扱う
+
+  \include example_4-3.cpp
+
+  実行結果
+  \verbatim
+% ./example_4-3 ../chapter_02/glang_demo_s.mpg
+0
+
+\endverbatim
+
+  何も出力されない...。\n
+  何か悪いのだろうか？
 */

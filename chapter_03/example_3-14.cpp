@@ -6,8 +6,8 @@
   $Id$
 */
 
-#include <opencv/cv.h>
-#include <opencv/highgui.h>
+#include <cv.h>
+#include <highgui.h>
 
 
 int main(int argc, char *argv[])

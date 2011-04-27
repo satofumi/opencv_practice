@@ -6,8 +6,8 @@
   $Id$
 */
 
-#include "cv.h"
-#include "highgui.h"
+#include <cv.h>
+#include <highgui.h>
 #include <iostream>
 
 using namespace std;
