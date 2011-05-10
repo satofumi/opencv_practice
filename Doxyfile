@@ -658,7 +658,7 @@ EXAMPLE_RECURSIVE      = NO
 # directories that contain image that are included in the documentation (see
 # the \image command).
 
-IMAGE_PATH             = chapter_02/ chapter_03/ chapter_04/
+IMAGE_PATH             = chapter_02/ chapter_03/ chapter_04/ programs/face_detection
 
 # The INPUT_FILTER tag can be used to specify a program that doxygen should
 # invoke to filter for each input file. Doxygen will invoke the filter program

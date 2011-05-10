@@ -25,3 +25,6 @@ chapter_04/example_4-0
 chapter_04/example_4-1
 chapter_04/example_4-2
 chapter_04/example_4-3
+
+programs/face_detection/face_detection
+programs/face_detection/teapot_perspective

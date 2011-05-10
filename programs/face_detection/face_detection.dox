@@ -1,10 +1,35 @@
 /*!
   \page face_detection_page 顔検出
 
+  - コンテンツ
+    - \ref face_detection_base
+    - \ref face_detection_perspective
+
+
+  \section face_detection_base 顔検出
+
   OpenCV.jp で紹介されている http://opencv.jp/opencv-1.0.0/document/opencvref_cv_detection.html を参考にした。 \n
   オリジナルからの変更点は、画像ファイルから顔検出をするのではなく、カメラから取得した画像から顔検出するようにしたくらい。
 
   \include face_detection.cpp
 
+  \image html face_detection_image.jpg 顔の検出例
+
   割とあっさり動作した。OpenCV すごい。
+
+
+  \section face_detection_perspective 顔検出の結果を用いた画面内オブジェクトの回転
+
+  画面を右から覗き込んだら、その向きにともなった画面内の 3D 物体を傾ける、という処理を作ろうとしてみた。
+
+  \include teapot_perspective.cpp
+
+  が、うまくいかない。\n
+
+  - 問題
+    - OpenGl の視点操作の知識が不足している。
+    - 複数の顔が検出されたときの処理が適当で、視点が急激に移動することがある。
+    - カクカク動く。検出結果に移動平均などのフィルタが必要そう。
+
+  いろいろと大変だと思った。
 */

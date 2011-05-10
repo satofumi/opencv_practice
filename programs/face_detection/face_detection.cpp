@@ -28,9 +28,13 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    const char* classifier_path = "/usr/local/share/opencv/haarcascades/haarcascade_frontalface_default.xml";
+    const char* classifier_path =
+        "/usr/local/share/opencv/"
+        "haarcascades/haarcascade_frontalface_default.xml";
     CvHaarClassifierCascade* cascade =
         (CvHaarClassifierCascade*)cvLoad(classifier_path);
+
+    CvMemStorage* storage = cvCreateMemStorage(0);
 
     const char* window_name = "face detection";
     cvNamedWindow(window_name, CV_WINDOW_AUTOSIZE);
@@ -44,9 +48,8 @@ int main(int argc, char *argv[])
         IplImage* small_image =
             cvCreateImage(cvSize(image->width/scale,image->height/scale),
                           IPL_DEPTH_8U, 3);
-        cvPyrDown( image, small_image, CV_GAUSSIAN_5x5 );
+        cvPyrDown(image, small_image, CV_GAUSSIAN_5x5);
 
-        CvMemStorage* storage = cvCreateMemStorage(0);
         CvSeq* faces = cvHaarDetectObjects(small_image, cascade, storage,
                                            1.2, 2, CV_HAAR_DO_CANNY_PRUNING);
 
@@ -65,9 +68,8 @@ int main(int argc, char *argv[])
         if (cvWaitKey(30) >= 0) {
             break;
         }
-
-        cvReleaseMemStorage(&storage);
     }
+    cvReleaseMemStorage(&storage);
 
     return 0;
 }
