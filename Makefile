@@ -15,10 +15,11 @@ clean :
 	cd chapter_03/ && $(MAKE) clean
 	cd chapter_04/ && $(MAKE) clean
 	cd chapter_13/ && $(MAKE) clean
+	cd programs/ && $(MAKE) clean
 
 html : $(HTML_DIR)/index.html
 
 .PHONY : all clean html
 ######################################################################
-$(HTML_DIR)/index.html : Makefile Doxyfile $(wildcard dox/* chapter_01/* chapter_02/* chapter_03/* chapter_04/* chapter_05/* chapter_13/*)
+$(HTML_DIR)/index.html : Makefile Doxyfile $(wildcard dox/* chapter_01/* chapter_02/* chapter_03/* chapter_04/* chapter_05/* chapter_13/* programs/* programs/face_detection/*)
 	doxygen

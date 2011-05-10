@@ -35,8 +35,7 @@
     - \ref chapter_04_movie
 
   - \subpage chapter_05_page
-
-  !!!
+    - !!!
 
   - \subpage chapter_13_page
     - !!!
@@ -47,5 +46,5 @@
      - !!!
 
   - \subpage sample_applications_page
-    - \ref face_detect_page
+    - \ref face_detection_page
 */

@@ -1,0 +1,10 @@
+/*!
+  \page face_detection_page 顔検出
+
+  OpenCV.jp で紹介されている http://opencv.jp/opencv-1.0.0/document/opencvref_cv_detection.html を参考にした。 \n
+  オリジナルからの変更点は、画像ファイルから顔検出をするのではなく、カメラから取得した画像から顔検出するようにしたくらい。
+
+  \include face_detection.cpp
+
+  割とあっさり動作した。OpenCV すごい。
+*/

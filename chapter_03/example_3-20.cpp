@@ -1,5 +1,5 @@
 /*!
-  \example example_3-16.cpp IPP のインストール確認
+  \example example_3-20.cpp IPP のインストール確認
 
   \author Satofumi KAMIMURA
 
