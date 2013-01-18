@@ -15,7 +15,7 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    CvCapture* capture = cvCreateCameraCapture(0);
+    CvCapture* capture = cvCreateCameraCapture(1);
     if (!capture) {
         cout << "camera device is not found." << endl;
         cout << "try by root user." << endl;

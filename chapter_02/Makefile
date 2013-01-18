@@ -1,11 +1,9 @@
 # chapter_02
 
-PREFIX = /usr/local
-
 CXXFLAGS = -g -O0 -Wall -Werror $(INCLUDES)
-INCLUDES = -I$(PREFIX)/include/opencv
+INCLUDES = -I/usr/include/opencv
 LDFLAGS =
-LDLIBS = -lhighgui
+LDLIBS = -lopencv_highgui -lopencv_imgproc -lopencv_core
 
 
 TARGET = \

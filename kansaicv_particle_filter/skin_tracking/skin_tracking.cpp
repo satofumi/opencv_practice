@@ -54,6 +54,10 @@ int main(int argc, char *argv[])
 
     // デバイスの初期化
     CvCapture* capture = cvCreateCameraCapture(camera_index);
+    enum { Image_width = 640, Image_height = 480 };
+    cvSetCaptureProperty(capture, CV_CAP_PROP_FRAME_WIDTH, Image_width);
+    cvSetCaptureProperty(capture, CV_CAP_PROP_FRAME_HEIGHT, Image_height);
+
     cvNamedWindow("Particle Filter", CV_WINDOW_AUTOSIZE);
     IplImage* image = cvQueryFrame(capture);
 
