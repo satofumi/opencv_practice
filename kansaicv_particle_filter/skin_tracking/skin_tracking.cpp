@@ -15,6 +15,7 @@ using namespace std;
 
 namespace
 {
+    // 最初の色は肌色
     double target_r_ = 120.0;
     double target_g_ = 63.0;
     double target_b_ = 45.0;
