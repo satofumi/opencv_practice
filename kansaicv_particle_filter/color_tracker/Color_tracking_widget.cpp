@@ -56,8 +56,12 @@ struct Color_tracking_widget::pImpl
                 &connection_widget_, SLOT(set_device_size(int)));
         connect(&connection_widget_, SIGNAL(opened(int)),
                 widget_, SLOT(opened(int)));
+#if 0
         connect(&capture_thread_, SIGNAL(captured()),
-                &image_view_widget_, SLOT(captured()));
+                &image_view_widget_, SLOT(draw()));
+#endif
+        connect(&image_view_widget_, SIGNAL(picked_color(const QColor&)),
+                &color_picker_widget_, SLOT(set_color(const QColor&)));
 
         // 終了ショートカットの登録
         (void) new QShortcut(Qt::CTRL + Qt::Key_Q, widget_, SLOT(close()));

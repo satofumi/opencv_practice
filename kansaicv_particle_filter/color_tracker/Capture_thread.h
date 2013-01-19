@@ -34,7 +34,7 @@ class Capture_thread : public QThread
     void run(void);
 
  signals:
-    void captured(void);
+    //void captured(void);
 
  private:
     Capture_thread(void);

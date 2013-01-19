@@ -50,8 +50,11 @@ void Capture_thread::run(void)
 
         Mat dest;
         cvtColor(frame, dest, CV_BGR2RGB);
+        //cvtColor(frame, dest, CV_BGR2Lab);
 
         pimpl->image_view_widget_->set_image(dest);
-        emit captured();
+        pimpl->image_view_widget_->update_tracking();
+
+        //emit captured();
     }
 }

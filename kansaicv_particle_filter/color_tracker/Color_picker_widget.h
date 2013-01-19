@@ -22,6 +22,9 @@ class Color_picker_widget : public QWidget
     Color_picker_widget(QWidget* parent = NULL);
     ~Color_picker_widget(void);
 
+ public slots:
+    void set_color(const QColor& color);
+
  private:
     Color_picker_widget(const Color_picker_widget& rhs);
     Color_picker_widget& operator = (const Color_picker_widget& rhs);

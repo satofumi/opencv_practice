@@ -28,10 +28,22 @@ class Image_view_widget : public QWidget
     Image_view_widget(QWidget* parent = NULL);
     ~Image_view_widget(void);
 
+    void update_tracking(void);
     void set_image(cv::Mat& frame);
 
+ protected:
+#if 1
+    void paintEvent(QPaintEvent *event);
+#endif
+    void mousePressEvent(QMouseEvent* event);
+
  public slots:
-    void captured(void);
+#if 0
+    void draw(void);
+#endif
+
+ signals:
+    void picked_color(const QColor& color);
 
  private:
     Image_view_widget(const Image_view_widget& rhs);
